@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 git clone git@github.com:silverleyjr/dotfiles.git
-cp /dotfiles/.zshrc ./
-cp /dotfiles/nvim /.config
 sudo apt install zsh
+cp /dotfiles/.zshrc ./
+sudo snap install nvim
+cp /dotfiles/nvim /.config
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 cd .local
