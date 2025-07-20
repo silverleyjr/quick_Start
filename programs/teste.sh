@@ -2,12 +2,13 @@
 git clone git@github.com:silverleyjr/dotfiles.git
 sudo apt install zsh
 cp /dotfiles/.zshrc ./
-sudo snap install nvim
+sudo snap install nvim --classic.
 cp /dotfiles/nvim /.config
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 cd .local
 mkdir bin
+cd
 ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
 cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
