@@ -1,7 +1,9 @@
+#!/bin/bash
 git clone git@github.com:silverleyjr/dotfiles.git
 sudo apt install zsh
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz 
 cp ./dotfiles/.zshrc ./
-sudo snap install nvim --classic.
 cp ./dotfiles/nvim ./.config
 cd .local
 mkdir bin
