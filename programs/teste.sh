@@ -1,11 +1,9 @@
-#!/usr/bin/bash
 git clone git@github.com:silverleyjr/dotfiles.git
 sudo apt install zsh
 cp /dotfiles/.zshrc ./
 sudo snap install nvim --classic.
 cp /dotfiles/nvim /.config
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 cd .local
 mkdir bin
 cd
@@ -22,4 +20,5 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 gsettings set org.gnome.desktop.default-applications.terminal exec 'kitty'
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $(which kitty) 50
 gsettings set org.gnome.desktop.default-applications.terminal exec $(which kitty)
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
