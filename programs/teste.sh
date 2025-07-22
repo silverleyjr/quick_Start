@@ -12,11 +12,8 @@ sudo rm -rf ~/dotfiles &&\
 git clone git@github.com:silverleyjr/dotfiles.git &&\
 # install curl
 sudo apt install -y curl &&\ 
-# install zsh
-sudo apt install -y zsh &&\
-# tornando zsh default
-grep /usr/bin/zsh /etc/shells || echo "/usr/bin/zsh" | sudo tee -a /etc/shells && \
-chsh -s /usr/bin/zsh &&\
+# install zsh e tornando o default
+sudo apt install zsh -y && chsh -s $(which zsh) &&\
 # clone base16
 sudo rm -rf ~/.config/base16-shell &&\
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&\
