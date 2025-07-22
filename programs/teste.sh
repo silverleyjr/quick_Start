@@ -13,7 +13,7 @@ git clone git@github.com:silverleyjr/dotfiles.git &&\
 # install curl
 sudo apt install -y curl &&\ 
 # install zsh e tornando o default
-sudo apt install zsh -y && chsh -s $(which zsh) &&\
+sudo apt install zsh -y && sudo chsh -s $(which zsh) $(whoami) &&\
 # clone base16
 sudo rm -rf ~/.config/base16-shell &&\
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&\
